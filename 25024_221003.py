@@ -1,12 +1,21 @@
-for i in range(int(input())):
-    a,b=map(int,input().split())
-    print("Yes" if 0 <= a <= 23 and 0 <= b <= 59 else "No", end=" ")
+import sys
+input = sys.stdin.readline
+
+list_a = [1, 3, 5, 7, 8, 10, 12]
+list_b = [4, 6, 9, 11]
+
+for _ in range(int(input())):
+    res = ['No', 'No']
     
-    if a == 2:
-        print("Yes" if 0 <= b <= 29 else "No")
-    elif a in [1, 3, 5, 7, 8, 10, 12]:
-        print("Yes" if b <= 30 else "No")
-    elif a in [4, 6, 9, 11]:
-        print("Yes" if b <= 31 else "No")
-    else:
-        print("No")
+    a, b = map(int, input().split())
+    if a > 0 and a <= 12:
+        if a in list_a and b <= 31 and b > 0:
+            res[0] = 'Yes'
+        elif a in list_b and b <= 30 and b > 0:
+            res[0] = 'Yes'
+        elif a == 2 and b <= 29 and b > 0:
+            res[0] = 'Yes'
+    if a >= 0 and a <= 23:
+        if b <= 59:
+            res[1] = 'Yes'
+    print(res[1], res[0])
