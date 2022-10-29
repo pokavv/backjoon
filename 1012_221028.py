@@ -27,7 +27,7 @@ for i in range(int(input())):
     
     for _ in range(loc_num):
         loc_x, loc_y = map(int, input().split())
-        field[loc_y][loc_x] = 1
+        field[loc_x][loc_y] = 1
     
     for a in range(width):
         for b in range(length):
