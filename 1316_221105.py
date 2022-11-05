@@ -1,18 +1,14 @@
 import sys
 input = sys.stdin.readline
-group_word = 0
+cnt = int(input())
 
-for _ in range(int(input())):
-    cnt = 0
+for _ in range(cnt):
     word = input()
-    
-    for i in range(len(word) - 1):
-        if word[i] != word[i+1]:
-            new_word = word[i+1:]
-            if new_word.count(word[i]) > 0:
-                cnt += 1
-    
-    if cnt == 0:
-        group_word += 1
+    for i in range(0, len(word) - 1):
+        if word[i] == word[i+1]:
+            pass
+        elif word[i] in word[i+1:]:
+            cnt -= 1
+            break
 
-print(group_word)
+print(cnt)
