@@ -1,5 +1,6 @@
 # tower of hanoi
 
+
 def hanoiTower(disks_num, starting_point, midpoint, arrival_point):    
     if disks_num == 1:
         print(starting_point, arrival_point)
@@ -27,8 +28,5 @@ def hanoiTower(disks_num, starting_point, midpoint, arrival_point):
 # hanoiTower(4, 1, 2, 3)
 
 disks = int(input())
-sum = 1
-for i in range(disks - 1):
-    sum = sum * 2 + 1 # if disk = n: move = 2**n - 1
-print(sum)
+print(2 ** disks - 1) # hanoi formula : (2 ** n) - 1
 hanoiTower(disks, 1, 2, 3)
