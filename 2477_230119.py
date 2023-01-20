@@ -20,6 +20,7 @@ for i in range(len(field_info)):
             height = field_info[i][1]
             hidx = i
 
+# 인접변 중 최장변의 위치를 구하기 위해 나머지연산을 수행해서 인접 최장변 구함
 subwidth = abs(field_info[(widx - 1) % 6][1] - field_info[(widx + 1) % 6][1])
 subheight = abs(field_info[(hidx - 1) % 6][1] - field_info[(hidx + 1) % 6][1])
 
