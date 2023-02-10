@@ -2,6 +2,7 @@ def dfs():
     if len(nums) == b:
         print(' '.join(map(str, nums)))
         return
+    
     for i in range(1, a+1):
         if visited[i]:
             continue
