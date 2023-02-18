@@ -22,3 +22,6 @@ n = int(input())
 
 cnt = 0
 row = [0] * n
+
+nQueens(0)
+print(cnt)
