@@ -3,7 +3,7 @@ input = sys.stdin.readline
 
 seq_len = int(input())
 subsequence = list(map(int, input().split()))
-dp = [0 for _ in range(seq_len)]
+dp = [1 for _ in range(seq_len)]
 
 for i in range(seq_len):
     for j in range(i):
@@ -12,3 +12,5 @@ for i in range(seq_len):
     #         print(dp)
     #         print('---')
     # print('====')
+
+print(max(dp))
